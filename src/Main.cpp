@@ -3,17 +3,18 @@
 //
 
 #include "Book.h"
-#include "BookManager.cpp"
+#include "SaveFileManager.cpp"
 
 int main() {
     std::cout << "Welcome to the UNA! (VIRTUAL)\n" << std::endl;
 
     Book book;
-    BookManager bookManager;
+    SaveFileManager saveManager;
     book.setTitle("Programacion 2");
     book.setAuthor("Maikol Guzman Alan");
 
-    bookManager.save(book);
+    // SRP Solution
+    saveManager.saveBook(book);
 
     return 0;
 }
